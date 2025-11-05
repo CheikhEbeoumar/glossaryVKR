@@ -1,0 +1,74 @@
+{
+  "terms": [
+    {
+      "id": "t1",
+      "name": "SSR",
+      "definition": "Server-Side Rendering — the server generates the HTML for a page on each request and sends fully rendered HTML to the client.",
+      "tags": ["rendering", "server"],
+      "sources": ["https://nextjs.org/docs/basic-features/pages#server-side-rendering"]
+    },
+    {
+      "id": "t2",
+      "name": "SSG",
+      "definition": "Static Site Generation — HTML pages are generated at build time and served as static files.",
+      "tags": ["rendering", "static"],
+      "sources": ["https://nextjs.org/docs/basic-features/pages#static-generation"]
+    },
+    {
+      "id": "t3",
+      "name": "CSR",
+      "definition": "Client-Side Rendering — the browser downloads a minimal HTML and renders content using JavaScript on the client.",
+      "tags": ["rendering", "client"],
+      "sources": ["https://developer.mozilla.org/en-US/docs/Glossary/Client-side"]
+    },
+    {
+      "id": "t4",
+      "name": "Hydration",
+      "definition": "The process of attaching client-side JavaScript to server-rendered HTML so the page becomes interactive.",
+      "tags": ["rendering", "client", "server"],
+      "sources": ["https://reactjs.org/docs/react-dom.html#hydrate"]
+    },
+    {
+      "id": "t5",
+      "name": "ISR",
+      "definition": "Incremental Static Regeneration — a method to update static pages after build time (Next.js feature).",
+      "tags": ["rendering", "static"],
+      "sources": ["https://nextjs.org/docs/basic-features/data-fetching/incremental-static-regeneration"]
+    },
+    {
+      "id": "t6",
+      "name": "CDN",
+      "definition": "Content Delivery Network — geographically distributed servers that cache and serve static assets close to users.",
+      "tags": ["infrastructure"],
+      "sources": ["https://developer.mozilla.org/en-US/docs/Glossary/CDN"]
+    },
+    {
+      "id": "t7",
+      "name": "SPA",
+      "definition": "Single Page Application — app that loads a single HTML page and dynamically updates content (often uses CSR).",
+      "tags": ["architecture"],
+      "sources": ["https://developer.mozilla.org/en-US/docs/Glossary/SPA"]
+    }
+  ],
+  "graph": {
+    "nodes": [
+      { "id": "t1", "label": "SSR", "type": "term" },
+      { "id": "t2", "label": "SSG", "type": "term" },
+      { "id": "t3", "label": "CSR", "type": "term" },
+      { "id": "t4", "label": "Hydration", "type": "term" },
+      { "id": "t5", "label": "ISR", "type": "term" },
+      { "id": "t6", "label": "CDN", "type": "infrastructure" },
+      { "id": "t7", "label": "SPA", "type": "architecture" }
+    ],
+    "edges": [
+      { "from": "t1", "to": "t3", "label": "compares-with" },
+      { "from": "t2", "to": "t3", "label": "compares-with" },
+      { "from": "t4", "to": "t1", "label": "used-in" },
+      { "from": "t4", "to": "t3", "label": "used-in" },
+      { "from": "t5", "to": "t2", "label": "extension-of" },
+      { "from": "t2", "to": "t6", "label": "served-via" },
+      { "from": "t1", "to": "t6", "label": "served-via" },
+      { "from": "t3", "to": "t7", "label": "common-in" }
+    ]
+  }
+}
