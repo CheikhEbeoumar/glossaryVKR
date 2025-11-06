@@ -1,0 +1,38 @@
+{
+  "common": {
+    "glossary": "Glossary",
+    "knowledgeBase": "Knowledge Base",
+    "loading": "Loading...",
+    "backToHome": "Back to Home",
+    "source": "Source",
+    "viewReference": "View Reference"
+  },
+  "navigation": {
+    "csrDemo": "CSR Demo",
+    "ssrDemo": "SSR Demo",
+    "graphView": "Graph View"
+  },
+  "pages": {
+    "home": {
+      "title": "Knowledge Base",
+      "subtitle": "Explore our comprehensive glossary of terms and concepts"
+    },
+    "csr": {
+      "title": "Client-Side Rendering",
+      "subtitle": "Content fetched dynamically in the browser using useEffect",
+      "loadingTerms": "Loading terms..."
+    },
+    "ssr": {
+      "title": "Server-Side Rendering",
+      "subtitle": "Pre-rendered on the server for each request using getServerSideProps"
+    },
+    "graph": {
+      "title": "Semantic Graph"
+    }
+  },
+  "language": {
+    "switch": "Switch Language",
+    "english": "English",
+    "russian": "Русский"
+  }
+}

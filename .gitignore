@@ -1,13 +1,23 @@
-# Node
+# Next.js build output
+.next/
+
+# Node modules and lock files (keep package-lock.json in repo if you want deterministic installs)
 node_modules/
-npm-debug.log
+
+# Environment files
 .env
+.env.local
+.env.*.local
+
+# OS / editor
 .DS_Store
-
-# Build output
-dist/
-build/
-out/
-
-# VS Code
 .vscode/
+
+# Logs
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Output folders
+out/
+build/
